@@ -1,0 +1,3 @@
+nodemon-runs code
+ctrl + C -quits the code
+rs for restart
