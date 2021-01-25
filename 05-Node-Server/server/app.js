@@ -5,9 +5,12 @@ const sequelize = require("./db");
 let journal = require("./controllers/journalcontroller");
 let user = require("./controllers/usercontroller");
 let calc = require("./controllers/calculatorcontroller");
+let cors = require("cors");
 
 sequelize.sync();
 // sequelize.sync({ force: true });
+app.use(cors());
+app.use(require("./middleware/headers"));
 
 //method to make sure tables inside of server are put onto the database if not there.
 
